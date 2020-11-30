@@ -48,6 +48,7 @@ namespace PersonUI
         void RefreshPersons()
         {
             personsListBox.Items.Clear();
+            _personList = PersonList.GetDefaultPersonList();
             foreach (PersonInfo _person in _personList)
             {
                 personsListBox.Items.Add(_person.PersonFullName + " " + _person.PersonAge + " лет");
