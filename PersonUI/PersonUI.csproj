@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="PersonEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PersonEditForm.Designer.cs">
+      <DependentUpon>PersonEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonForm.Designer.cs">
+      <DependentUpon>PersonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PersonEditForm.resx">
+      <DependentUpon>PersonEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonForm.resx">
+      <DependentUpon>PersonForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PersonLibrary\PersonLibrary.csproj">
+      <Project>{8e450264-a4fc-48c4-a40b-718185cbedf9}</Project>
+      <Name>PersonLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
