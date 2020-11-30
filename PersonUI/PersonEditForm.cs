@@ -19,11 +19,22 @@ namespace PersonUI
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Close the form on click discard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void personEditFormCancelButtton_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+
+        /// <summary>
+        /// On press ok add push date to the _newPerson prop
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void personEditFormAddButton_Click(object sender, EventArgs e)
         {
             DateTime birthDate = DateTime.Today;

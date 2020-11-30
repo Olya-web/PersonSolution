@@ -42,6 +42,9 @@ namespace PersonUI
 
         }
 
+        /// <summary>
+        /// Clear data before and load new which updated
+        /// </summary>
         void RefreshPersons()
         {
             personsListBox.Items.Clear();
@@ -51,12 +54,17 @@ namespace PersonUI
             }
         }
 
+        /// <summary>
+        /// Add new person method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addNewPersonButton_Click(object sender, EventArgs e)
         {
             PersonEditForm newForm = new PersonEditForm();
             if(newForm.ShowDialog() == DialogResult.OK)
             {
-                _personList.Add(newForm._newPerson);
+                 _personList.Add(newForm._newPerson);
             }
             RefreshPersons();
         }
