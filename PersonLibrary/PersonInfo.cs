@@ -8,10 +8,26 @@ namespace PersonLibrary
         private string _personSecondName = "";
         private DateTime _personDateBirth = DateTime.Today;
         private string _personAddress = "";
+        private int _personID = 0;
+        /// <summary>
+        /// Prop returns person id
+        /// </summary>
+        public int PersonID
+        {
+            get
+            {
+                return _personID;
+            }
+            set
+            {
+                _personID = value;
+            }
+        }
 
         /// <summary>
         /// Prop return firstname
         /// </summary>
+        /// 
         public string PersonFirstName
         {
             get => _personFirstName;
