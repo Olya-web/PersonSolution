@@ -128,6 +128,7 @@
     <None Include="PersonLibrary.Class1.datasource" />
     <None Include="PersonLibrary.PersonInfo.datasource" />
     <None Include="PersonLibrary.PersonList.datasource" />
+    <None Include="PersonLibrary.ProfessionList.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

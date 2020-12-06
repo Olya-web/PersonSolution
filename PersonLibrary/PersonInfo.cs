@@ -136,7 +136,7 @@ namespace PersonLibrary
                 cm.Parameters.Add(new SqlParameter("@PersonDateBirth", _personDateBirth));
                 cm.Parameters.Add(new SqlParameter("@PersonFirstName", _personFirstName));
                 cm.Parameters.Add(new SqlParameter("@PersonSecondName", _personSecondName));
-                cm.Parameters.Add(new SqlParameter("@ProfessionID", _personSecondName));
+                cm.Parameters.Add(new SqlParameter("@ProfessionID", _professionID));
 
                 cm.ExecuteNonQuery();
 

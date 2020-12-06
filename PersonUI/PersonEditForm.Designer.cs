@@ -110,7 +110,7 @@ namespace PersonUI
             // 
             // professionlistbindingSource
             // 
-            this.professionlistbindingSource.DataSource = typeof(PersonLibrary.PersonList);
+            this.professionlistbindingSource.DataSource = typeof(PersonLibrary.ProfessionList);
             // 
             // professionIDLabel
             // 
@@ -125,7 +125,7 @@ namespace PersonUI
             // 
             this.professionIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personInfoBindingSource, "ProfessionID", true));
             this.professionIDComboBox.DataSource = this.professionlistbindingSource;
-            this.professionIDComboBox.DisplayMember = "ProfessionName";
+            this.professionIDComboBox.DisplayMember = "ProfessionsName";
             this.professionIDComboBox.FormattingEnabled = true;
             this.professionIDComboBox.Location = new System.Drawing.Point(154, 142);
             this.professionIDComboBox.Name = "professionIDComboBox";
