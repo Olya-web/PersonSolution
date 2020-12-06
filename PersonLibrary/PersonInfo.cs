@@ -13,9 +13,26 @@ namespace PersonLibrary
         private int _personID = 0;
         private int _professionID = 0;
         private string _professionName = "";
+        private string _email = "";
 
 
-
+        /// <summary>
+        /// email prop
+        /// </summary>
+        public string Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                _email = value;
+            }
+        }
+        /// <summary>
+        /// profession id prop
+        /// </summary>
         public int ProfessionID
         {
             get
@@ -27,7 +44,9 @@ namespace PersonLibrary
                 _professionID = value;
             }
         }
-
+        /// <summary>
+        /// profession name prop
+        /// </summary>
         public string ProfessionName
         {
             get
@@ -137,6 +156,7 @@ namespace PersonLibrary
                 cm.Parameters.Add(new SqlParameter("@PersonFirstName", _personFirstName));
                 cm.Parameters.Add(new SqlParameter("@PersonSecondName", _personSecondName));
                 cm.Parameters.Add(new SqlParameter("@ProfessionID", _professionID));
+                cm.Parameters.Add(new SqlParameter("@Email", _email));
 
                 cm.ExecuteNonQuery();
 
@@ -203,6 +223,7 @@ namespace PersonLibrary
                 cm.Parameters.Add(new SqlParameter("@PersonFirstName", _personFirstName));
                 cm.Parameters.Add(new SqlParameter("@PersonSecondName", _personSecondName));
                 cm.Parameters.Add(new SqlParameter("@ProfessionID", _professionID));
+                cm.Parameters.Add(new SqlParameter("@Email", _email));
 
                 cm.ExecuteNonQuery();
 
@@ -241,15 +262,13 @@ namespace PersonLibrary
 
                 for (int i = 0; dataReader.Read(); i++)
                 {
-                  
-
                     _personID = (int)dataReader["PersonID"];
                    _personFirstName = dataReader["PersonFirstName"].ToString();
                     _personSecondName = dataReader["PersonSecondName"].ToString();
                     _personDateBirth = (DateTime)dataReader["PersonDateBirth"];
                     _professionID = (int)dataReader["ProfessionID"];
                     _professionName = dataReader["ProfessionName"].ToString();
-
+                    _email = dataReader["email"].ToString();
                 }
 
 

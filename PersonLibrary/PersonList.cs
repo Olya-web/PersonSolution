@@ -40,6 +40,7 @@ namespace PersonLibrary
                     newPerson.PersonDateBirh = (DateTime)dataReader["PersonDateBirth"];
                     newPerson.ProfessionID = (int)dataReader["ProfessionID"];
                     newPerson.ProfessionName = dataReader["ProfessionName"].ToString();
+                    newPerson.Email = dataReader["email"].ToString();
 
                     myList.Add(newPerson);
                 }

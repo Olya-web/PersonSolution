@@ -35,17 +35,20 @@ namespace PersonUI
             this.deletePersonButton = new System.Windows.Forms.Button();
             this.changePerson = new System.Windows.Forms.Button();
             this.personListDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.professionListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.personListDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professionListBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // loadPersonsButton
@@ -97,68 +100,86 @@ namespace PersonUI
             this.personListDataGridView.AutoGenerateColumns = false;
             this.personListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.personListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn2});
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn1});
             this.personListDataGridView.DataSource = this.personListBindingSource;
-            this.personListDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.personListDataGridView.Location = new System.Drawing.Point(16, 3);
             this.personListDataGridView.Name = "personListDataGridView";
             this.personListDataGridView.ReadOnly = true;
             this.personListDataGridView.RowHeadersWidth = 51;
             this.personListDataGridView.RowTemplate.Height = 24;
             this.personListDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.personListDataGridView.Size = new System.Drawing.Size(933, 220);
+            this.personListDataGridView.Size = new System.Drawing.Size(872, 220);
             this.personListDataGridView.TabIndex = 5;
             // 
-            // dataGridViewTextBoxColumn3
+            // personListBindingSource
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PersonID";
-            this.dataGridViewTextBoxColumn3.HeaderText = "PersonID";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.personListBindingSource.DataSource = typeof(PersonLibrary.PersonInfo);
+            // 
+            // professionListBindingSource
+            // 
+            this.professionListBindingSource.DataSource = typeof(PersonLibrary.ProfessionInfo);
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PersonFirstName";
-            this.dataGridViewTextBoxColumn4.HeaderText = "PersonFirstName";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PersonID";
+            this.dataGridViewTextBoxColumn4.HeaderText = "PersonID";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Visible = false;
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProfessionID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "ProfessionID";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "PersonFirstName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "PersonFirstName";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "PersonSecondName";
+            this.dataGridViewTextBoxColumn9.HeaderText = "PersonSecondName";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Visible = false;
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "PersonSecondName";
-            this.dataGridViewTextBoxColumn8.HeaderText = "PersonSecondName";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "PersonFullName";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Полное имя";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Visible = false;
             this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ProfessionID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ProfessionID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "PersonFullName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Полное имя";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "PersonDateBirh";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Дата рождения";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -166,34 +187,30 @@ namespace PersonUI
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PersonDateBirh";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Дата рождения";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "PersonAge";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Возраст";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "PersonAge";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Возраст";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ProfessionName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Профессия";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProfessionName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Профессия";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // personListBindingSource
-            // 
-            this.personListBindingSource.DataSource = typeof(PersonLibrary.PersonInfo);
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // PersonForm
             // 
@@ -211,6 +228,7 @@ namespace PersonUI
             this.Load += new System.EventHandler(this.PersonForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.personListDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professionListBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,15 +239,17 @@ namespace PersonUI
         private System.Windows.Forms.BindingSource personListBindingSource;
         private System.Windows.Forms.Button deletePersonButton;
         private System.Windows.Forms.Button changePerson;
+        private System.Windows.Forms.BindingSource professionListBindingSource;
         private System.Windows.Forms.DataGridView personListDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }
 
