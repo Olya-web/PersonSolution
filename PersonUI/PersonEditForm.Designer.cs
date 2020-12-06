@@ -29,70 +29,49 @@ namespace PersonUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.personNameLabel = new System.Windows.Forms.Label();
-            this.personFirstnameValue = new System.Windows.Forms.TextBox();
-            this.personSecondnameValue = new System.Windows.Forms.TextBox();
-            this.personSecondNameLabel = new System.Windows.Forms.Label();
-            this.personBirthdayLabel = new System.Windows.Forms.Label();
-            this.personBirthdayValue = new System.Windows.Forms.DateTimePicker();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label personDateBirhLabel;
+            System.Windows.Forms.Label personFirstNameLabel;
+            System.Windows.Forms.Label professionIDLabel;
             this.personEditFormAddButton = new System.Windows.Forms.Button();
             this.personEditFormCancelButtton = new System.Windows.Forms.Button();
+            this.personInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personDateBirhDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.personFirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.professionlistbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.professionIDComboBox = new System.Windows.Forms.ComboBox();
+            personDateBirhLabel = new System.Windows.Forms.Label();
+            personFirstNameLabel = new System.Windows.Forms.Label();
+            professionIDLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.personInfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professionlistbindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // personNameLabel
+            // personDateBirhLabel
             // 
-            this.personNameLabel.AutoSize = true;
-            this.personNameLabel.Location = new System.Drawing.Point(15, 26);
-            this.personNameLabel.Name = "personNameLabel";
-            this.personNameLabel.Size = new System.Drawing.Size(29, 13);
-            this.personNameLabel.TabIndex = 0;
-            this.personNameLabel.Text = "Имя";
+            personDateBirhLabel.AutoSize = true;
+            personDateBirhLabel.Location = new System.Drawing.Point(28, 42);
+            personDateBirhLabel.Name = "personDateBirhLabel";
+            personDateBirhLabel.Size = new System.Drawing.Size(120, 17);
+            personDateBirhLabel.TabIndex = 6;
+            personDateBirhLabel.Text = "Person Date Birh:";
             // 
-            // personFirstnameValue
+            // personFirstNameLabel
             // 
-            this.personFirstnameValue.Location = new System.Drawing.Point(122, 26);
-            this.personFirstnameValue.Name = "personFirstnameValue";
-            this.personFirstnameValue.Size = new System.Drawing.Size(200, 20);
-            this.personFirstnameValue.TabIndex = 1;
-            // 
-            // personSecondnameValue
-            // 
-            this.personSecondnameValue.Location = new System.Drawing.Point(122, 70);
-            this.personSecondnameValue.Name = "personSecondnameValue";
-            this.personSecondnameValue.Size = new System.Drawing.Size(200, 20);
-            this.personSecondnameValue.TabIndex = 3;
-            // 
-            // personSecondNameLabel
-            // 
-            this.personSecondNameLabel.AutoSize = true;
-            this.personSecondNameLabel.Location = new System.Drawing.Point(15, 73);
-            this.personSecondNameLabel.Name = "personSecondNameLabel";
-            this.personSecondNameLabel.Size = new System.Drawing.Size(56, 13);
-            this.personSecondNameLabel.TabIndex = 2;
-            this.personSecondNameLabel.Text = "Фамилия";
-            // 
-            // personBirthdayLabel
-            // 
-            this.personBirthdayLabel.AutoSize = true;
-            this.personBirthdayLabel.Location = new System.Drawing.Point(15, 122);
-            this.personBirthdayLabel.Name = "personBirthdayLabel";
-            this.personBirthdayLabel.Size = new System.Drawing.Size(86, 13);
-            this.personBirthdayLabel.TabIndex = 4;
-            this.personBirthdayLabel.Text = "Дата рождения";
-            // 
-            // personBirthdayValue
-            // 
-            this.personBirthdayValue.Location = new System.Drawing.Point(122, 116);
-            this.personBirthdayValue.Name = "personBirthdayValue";
-            this.personBirthdayValue.Size = new System.Drawing.Size(200, 20);
-            this.personBirthdayValue.TabIndex = 5;
+            personFirstNameLabel.AutoSize = true;
+            personFirstNameLabel.Location = new System.Drawing.Point(28, 84);
+            personFirstNameLabel.Name = "personFirstNameLabel";
+            personFirstNameLabel.Size = new System.Drawing.Size(129, 17);
+            personFirstNameLabel.TabIndex = 7;
+            personFirstNameLabel.Text = "Person First Name:";
             // 
             // personEditFormAddButton
             // 
             this.personEditFormAddButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.personEditFormAddButton.Location = new System.Drawing.Point(18, 208);
+            this.personEditFormAddButton.Location = new System.Drawing.Point(31, 311);
+            this.personEditFormAddButton.Margin = new System.Windows.Forms.Padding(4);
             this.personEditFormAddButton.Name = "personEditFormAddButton";
-            this.personEditFormAddButton.Size = new System.Drawing.Size(105, 30);
+            this.personEditFormAddButton.Size = new System.Drawing.Size(140, 37);
             this.personEditFormAddButton.TabIndex = 6;
             this.personEditFormAddButton.Text = "OK";
             this.personEditFormAddButton.UseVisualStyleBackColor = true;
@@ -100,43 +79,91 @@ namespace PersonUI
             // 
             // personEditFormCancelButtton
             // 
-            this.personEditFormCancelButtton.Location = new System.Drawing.Point(187, 208);
+            this.personEditFormCancelButtton.Location = new System.Drawing.Point(237, 311);
+            this.personEditFormCancelButtton.Margin = new System.Windows.Forms.Padding(4);
             this.personEditFormCancelButtton.Name = "personEditFormCancelButtton";
-            this.personEditFormCancelButtton.Size = new System.Drawing.Size(105, 30);
+            this.personEditFormCancelButtton.Size = new System.Drawing.Size(140, 37);
             this.personEditFormCancelButtton.TabIndex = 6;
             this.personEditFormCancelButtton.Text = "Отмена";
             this.personEditFormCancelButtton.UseVisualStyleBackColor = true;
             this.personEditFormCancelButtton.Click += new System.EventHandler(this.personEditFormCancelButtton_Click);
             // 
+            // personInfoBindingSource
+            // 
+            this.personInfoBindingSource.DataSource = typeof(PersonLibrary.PersonInfo);
+            // 
+            // personDateBirhDateTimePicker
+            // 
+            this.personDateBirhDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.personInfoBindingSource, "PersonDateBirh", true));
+            this.personDateBirhDateTimePicker.Location = new System.Drawing.Point(154, 38);
+            this.personDateBirhDateTimePicker.Name = "personDateBirhDateTimePicker";
+            this.personDateBirhDateTimePicker.Size = new System.Drawing.Size(351, 22);
+            this.personDateBirhDateTimePicker.TabIndex = 7;
+            // 
+            // personFirstNameTextBox
+            // 
+            this.personFirstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.personInfoBindingSource, "PersonFirstName", true));
+            this.personFirstNameTextBox.Location = new System.Drawing.Point(154, 84);
+            this.personFirstNameTextBox.Name = "personFirstNameTextBox";
+            this.personFirstNameTextBox.Size = new System.Drawing.Size(351, 22);
+            this.personFirstNameTextBox.TabIndex = 8;
+            // 
+            // professionlistbindingSource
+            // 
+            this.professionlistbindingSource.DataSource = typeof(PersonLibrary.PersonList);
+            // 
+            // professionIDLabel
+            // 
+            professionIDLabel.AutoSize = true;
+            professionIDLabel.Location = new System.Drawing.Point(52, 145);
+            professionIDLabel.Name = "professionIDLabel";
+            professionIDLabel.Size = new System.Drawing.Size(96, 17);
+            professionIDLabel.TabIndex = 8;
+            professionIDLabel.Text = "Profession ID:";
+            // 
+            // professionIDComboBox
+            // 
+            this.professionIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.personInfoBindingSource, "ProfessionID", true));
+            this.professionIDComboBox.DataSource = this.professionlistbindingSource;
+            this.professionIDComboBox.DisplayMember = "ProfessionName";
+            this.professionIDComboBox.FormattingEnabled = true;
+            this.professionIDComboBox.Location = new System.Drawing.Point(154, 142);
+            this.professionIDComboBox.Name = "professionIDComboBox";
+            this.professionIDComboBox.Size = new System.Drawing.Size(351, 24);
+            this.professionIDComboBox.TabIndex = 9;
+            this.professionIDComboBox.ValueMember = "ProfessionID";
+            // 
             // PersonEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(professionIDLabel);
+            this.Controls.Add(this.professionIDComboBox);
+            this.Controls.Add(personFirstNameLabel);
+            this.Controls.Add(this.personFirstNameTextBox);
+            this.Controls.Add(personDateBirhLabel);
+            this.Controls.Add(this.personDateBirhDateTimePicker);
             this.Controls.Add(this.personEditFormCancelButtton);
             this.Controls.Add(this.personEditFormAddButton);
-            this.Controls.Add(this.personBirthdayValue);
-            this.Controls.Add(this.personBirthdayLabel);
-            this.Controls.Add(this.personSecondnameValue);
-            this.Controls.Add(this.personSecondNameLabel);
-            this.Controls.Add(this.personFirstnameValue);
-            this.Controls.Add(this.personNameLabel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PersonEditForm";
             this.Text = "PersonEditForm";
+            this.Load += new System.EventHandler(this.PersonEditForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.personInfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.professionlistbindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label personNameLabel;
-        private System.Windows.Forms.TextBox personFirstnameValue;
-        private System.Windows.Forms.TextBox personSecondnameValue;
-        private System.Windows.Forms.Label personSecondNameLabel;
-        private System.Windows.Forms.Label personBirthdayLabel;
-        private System.Windows.Forms.DateTimePicker personBirthdayValue;
         private System.Windows.Forms.Button personEditFormAddButton;
         private System.Windows.Forms.Button personEditFormCancelButtton;
+        private System.Windows.Forms.BindingSource personInfoBindingSource;
+        private System.Windows.Forms.DateTimePicker personDateBirhDateTimePicker;
+        private System.Windows.Forms.TextBox personFirstNameTextBox;
+        private System.Windows.Forms.BindingSource professionlistbindingSource;
+        private System.Windows.Forms.ComboBox professionIDComboBox;
     }
 }

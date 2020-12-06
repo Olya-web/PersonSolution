@@ -87,6 +87,8 @@
     <Compile Include="Class1.cs" />
     <Compile Include="PersonInfo.cs" />
     <Compile Include="PersonList.cs" />
+    <Compile Include="ProfessionInfo.cs" />
+    <Compile Include="ProfessionList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

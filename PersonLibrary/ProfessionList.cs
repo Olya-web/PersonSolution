@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace PersonLibrary
 {
-    public class PersonList: List<PersonInfo>
+    public class ProfessionList : List<ProfessionInfo>
     {
-      
-        public static PersonList GetDefaultPersonList()
+
+        public static ProfessionList GetDefaultProfessionList()
         {
-            PersonList myList = new PersonList();
+            ProfessionList myList = new ProfessionList();
 
             try
             {
@@ -26,22 +25,19 @@ namespace PersonLibrary
 
                 SqlCommand cm = cn.CreateCommand();
                 cm.CommandType = CommandType.StoredProcedure;
-                cm.CommandText = "GetPersonList";
+                cm.CommandText = "GetProfessionList";
 
                 SqlDataReader dataReader = cm.ExecuteReader();
 
                 for (int i = 0; dataReader.Read(); i++)
                 {
-                    PersonInfo newPerson = new PersonInfo();
+                    ProfessionInfo newProfession = new ProfessionInfo();
 
-                    newPerson.PersonID = (int)dataReader["PersonID"];
-                    newPerson.PersonFirstName = dataReader["PersonFirstName"].ToString();
-                    newPerson.PersonSecondName = dataReader["PersonSecondName"].ToString();
-                    newPerson.PersonDateBirh = (DateTime)dataReader["PersonDateBirth"];
-                    newPerson.ProfessionID = (int)dataReader["ProfessionID"];
-                    newPerson.ProfessionName = dataReader["ProfessionName"].ToString();
+                    newProfession.ProfessionID = (int)dataReader["ProfessionID"];
+                    newProfession.ProfessionsName = dataReader["ProfessionName"].ToString();
+    
 
-                    myList.Add(newPerson);
+                    myList.Add(newProfession);
                 }
 
 
@@ -53,7 +49,7 @@ namespace PersonLibrary
                 throw;
             }
 
-           
+
 
             return myList;
         }

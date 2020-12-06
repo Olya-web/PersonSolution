@@ -37,11 +37,22 @@ namespace PersonUI
         /// <param name="e"></param>
         private void personEditFormAddButton_Click(object sender, EventArgs e)
         {
-            DateTime birthDate = DateTime.Today;
-            _newPerson.PersonFirstName = personFirstnameValue.Text;
-            _newPerson.PersonSecondName = personSecondnameValue.Text;
-            DateTime.TryParse(personBirthdayValue.Text, out birthDate);
-            _newPerson.PersonDateBirh = birthDate;
+            if(_newPerson.PersonID > 0)
+            {
+                _newPerson.UpdatePerson();
+            }
+            else
+            {
+                _newPerson.InsertNewPerson();
+            }
+        }
+
+        private void PersonEditForm_Load(object sender, EventArgs e)
+        {
+            ProfessionList _professionList = ProfessionList.GetDefaultProfessionList();
+            professionlistbindingSource.DataSource = _professionList;
+
+            personInfoBindingSource.DataSource = _newPerson;
         }
     }
 }

@@ -47,12 +47,10 @@ namespace PersonUI
         /// </summary>
         void RefreshPersons()
         {
-            personsListBox.Items.Clear();
+           
             _personList = PersonList.GetDefaultPersonList();
-            foreach (PersonInfo _person in _personList)
-            {
-                personsListBox.Items.Add(_person.PersonFullName + " " + _person.PersonAge + " лет");
-            }
+            personListBindingSource.DataSource = null;
+            personListBindingSource.DataSource = _personList;
         }
 
         /// <summary>
@@ -63,11 +61,44 @@ namespace PersonUI
         private void addNewPersonButton_Click(object sender, EventArgs e)
         {
             PersonEditForm newForm = new PersonEditForm();
-            if(newForm.ShowDialog() == DialogResult.OK)
+            newForm.ShowDialog();
+            RefreshPersons();
+        }
+
+        private void deletePersonButton_Click(object sender, EventArgs e)
+        {
+            int personID = (int)personListDataGridView.SelectedRows[0].Cells[0].Value;
+
+            foreach (PersonInfo person in _personList)
             {
-                 _personList.Add(newForm._newPerson);
+                if(person.PersonID == personID)
+                {
+                    person.DeletePerson();
+                }
             }
             RefreshPersons();
+        }
+
+        private void changePerson_Click(object sender, EventArgs e)
+        {
+            
+            int personID = (int)personListDataGridView.SelectedRows[0].Cells[0].Value;
+            PersonEditForm newPersonEditForm = new PersonEditForm();
+            foreach (PersonInfo person in _personList)
+            {
+                if (person.PersonID == personID)
+                {
+                    person.GetPerson(personID);
+                    newPersonEditForm._newPerson = person;
+                }
+            }
+            newPersonEditForm.ShowDialog();
+            RefreshPersons(); 
+        }
+
+        private void personListDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
